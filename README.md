@@ -13,7 +13,7 @@ It can volume up and down with the knob. Media next/prev/pause using the buttons
 | **LiPo Battery (1000mAh)** | ~$8 | To make my device wireless (independent). |
 | **TP4056 Charging Module** | ~$2 | USB-C charging logic for the battery. |
 | **Custom PCB** | ~$20 | To mount components and avoid messy wiring. |
-| **3D Printed Case** | ? | I will print the enclosure to sit at a 45-degree angle on the desk. |\
+| **3D Printed Case** | ~$2 | I will print the enclosure to sit at a 45-degree angle on the desk. |\
 
 Planning for PCB board
 2D:
