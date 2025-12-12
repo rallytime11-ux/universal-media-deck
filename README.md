@@ -6,14 +6,14 @@ It can volume up and down with the knob. Media next/prev/pause using the buttons
 
 | Part | Est. Cost | Purpose |
 | :--- | :--- | :--- |
-| **ESP32-S3 Dev Board** | ~$10 | Microcontroller with BLE and high performance for driving the screen. |
-| **1.28" Round LCD (GC9A01)** | ~$15 | High-res circular display for visual feedback/UI. |
+| **ESP32-S3 Dev Board** | ~$10 | Microcontroller with bluetooth and high performance for driving the screen. |
+| **1.28" Round LCD (GC9A01)** | ~$15 | =Display for visual feedback |
 | **Rotary Encoder (EC11)** | ~$5 | Infinite rotation knob for volume control. |
-| **Mechanical Switches (x3)** | ~$5 | Cherry MX style switches for tactile media control. |
-| **LiPo Battery (1000mAh)** | ~$8 | To make the device wireless. |
+| **Mechanical Switches (x3)** | ~$5 | Switches for tactile media control. |
+| **LiPo Battery (1000mAh)** | ~$8 | To make my device wireless (independent). |
 | **TP4056 Charging Module** | ~$2 | USB-C charging logic for the battery. |
 | **Custom PCB** | ~$20 | To mount components and avoid messy wiring. |
-| **3D Printed Case** | $0 | I will print the enclosure to sit at a 45-degree angle on the desk. |\
+| **3D Printed Case** | ? | I will print the enclosure to sit at a 45-degree angle on the desk. |\
 
 Planning for PCB board
 2D:
