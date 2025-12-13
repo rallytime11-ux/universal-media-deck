@@ -15,7 +15,7 @@ It can volume up and down with the knob. Media next/prev/pause using the buttons
 | **SPDT Slide Switch** | ~$1 | Physical On/Off switch for power control. |
 | **Custom PCB** | ~$20 | To mount all components and modules, eliminating messy wiring. |
 | **3D Printed Case** | ~$2 | Enclosure for desktop use. |
-|  | ~$Total Est~ | 70 |
+|  | $Total Est~ | $70 |
 
 
 Planning Graph
