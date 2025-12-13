@@ -14,24 +14,90 @@ It can volume up and down with the knob. Media next/prev/pause using the buttons
 | **Custom PCB** | ~$20 | To mount components and avoid messy wiring. |
 | **3D Printed Case** | ~$2 | I will print the enclosure to sit at a 45-degree angle on the desk. |\
 
-Planning for PCB board
+Planning Graph
+Schmedic: 
+<img width="885" height="705" alt="image" src="https://github.com/user-attachments/assets/799e39c4-3de2-433e-968e-037f7f6ef4fb" />
+PCB
 2D:
-<img width="739" height="537" alt="image" src="https://github.com/user-attachments/assets/d891aa1a-e853-4c75-91cb-c246aa6cef67" />
+<img width="1035" height="738" alt="image" src="https://github.com/user-attachments/assets/8d200b32-d39f-42ce-9d1e-c4c6bbe3b913" />
 3D
 Front:
-<img width="987" height="720" alt="image" src="https://github.com/user-attachments/assets/9e2a5d8a-6879-4938-9902-eda8dce37d42" />
+<img width="1132" height="707" alt="image" src="https://github.com/user-attachments/assets/364d5f47-c3c0-473f-bfb5-3afeef045ca0" />
 Back:
-<img width="962" height="682" alt="image" src="https://github.com/user-attachments/assets/75420071-a103-44b8-b553-705ab83d0c9d" />
+<img width="929" height="690" alt="image" src="https://github.com/user-attachments/assets/2b1ed037-6c78-425a-b60b-1aa41d9fddcc" />
 
+Code(C++):
+#include <BleKeyboard.h>
+#include <TFT_eSPI.h>
+#include <RotaryEncoder.h>
 
-Code(C++ with the `BleKeyboard` library.):
-```cpp
-// Pseudo-code concept
-if (encoder.turnedRight()) {
-    ble.send(KEY_MEDIA_VOLUME_UP);
-    display.animateVolumeBar(UP);
+// 1. Initialization
+BleKeyboard bleKeyboard("Media Deck", "Maker Name", 100);
+TFT_eSPI display = TFT_eSPI();
+
+// Define pins for Encoder, its button (SW), and the 3 media buttons
+RotaryEncoder encoder(ENCODER_CLK_PIN, ENCODER_DT_PIN, RotaryEncoder::LatchMode::FOUR3);
+const int ENCODER_SW_PIN = 10;
+const int BTN_NEXT_PIN = 11;
+const int BTN_PREV_PIN = 12;
+const int BTN_PAUSE_PIN = 13;
+
+void setup() {
+    // Start Bluetooth
+    bleKeyboard.begin();
+    // Initialize Display
+    display.init();
+    display.fillScreen(TFT_BLACK);
+    display.setRotation(1); 
+    // Initialize Encoder Pins
+    pinMode(ENCODER_SW_PIN, INPUT_PULLUP);
+    // Initialize Button Pins (using pullup resistors)
+    pinMode(BTN_NEXT_PIN, INPUT_PULLUP);
+    // ... Initialize PREV and PAUSE pins ...
+
+    // Display welcome screen
+    display.drawString("Deck Ready", 10, 10, 4);
 }
-if (buttonPlay.pressed()) {
-    ble.send(KEY_MEDIA_PLAY_PAUSE);
-    display.showIcon("PAUSE");
+
+// 2. Main Loop Logic
+void loop() {
+    // Check if the device is connected via Bluetooth
+    if (bleKeyboard.isConnected()) {
+        
+        // --- Encoder (Volume Control) ---
+        encoder.tick(); // Update encoder state
+        int newPosition = encoder.getPosition();
+        static int lastPosition = 0;
+
+        if (newPosition != lastPosition) {
+            if (newPosition > lastPosition) {
+                // Volume Up (Turned Right)
+                bleKeyboard.write(KEY_MEDIA_VOLUME_UP);
+            } else {
+                // Volume Down (Turned Left)
+                bleKeyboard.write(KEY_MEDIA_VOLUME_DOWN);
+            }
+            display.updateVolumeBar(newPosition); // Function to update visual bar
+            lastPosition = newPosition;
+        }
+
+        // --- Encoder Button (Play/Pause/Mute) ---
+        if (digitalRead(ENCODER_SW_PIN) == LOW) { // Button is pressed
+            // Debounce delay here
+            bleKeyboard.write(KEY_MEDIA_PLAY_PAUSE);
+            display.showIcon("PLAY / PAUSE");
+        }
+
+        // --- Dedicated Buttons (Next/Previous) ---
+        if (digitalRead(BTN_NEXT_PIN) == LOW) {
+            // Debounce delay here
+            bleKeyboard.write(KEY_MEDIA_NEXT_TRACK);
+            display.showIcon("NEXT");
+        }
+        // ... Logic for BTN_PREV and BTN_PAUSE ...
+
+    } else {
+        // Display "DISCONNECTED" on the screen
+        display.drawString("Disconnected", 10, 50, 2);
+    }
 }
