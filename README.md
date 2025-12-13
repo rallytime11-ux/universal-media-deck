@@ -14,8 +14,7 @@ It can volume up and down with the knob. Media next/prev/pause using the buttons
 | **TP4056 Charging Module** | ~$2 | **Module-based charging** for the LiPo battery. (Simplified: Avoids complex on-board charging circuit design). |
 | **SPDT Slide Switch** | ~$1 | Physical On/Off switch for power control. |
 | **Custom PCB** | ~$20 | To mount all components and modules, eliminating messy wiring. |
-| **3D Printed Case** | ~$2 | Enclosure for desktop use. |
-|  | $Total Est~ | $70 |
+|  | $Total Est~ | $62(without shipping fees) |
 
 
 Planning Graph
