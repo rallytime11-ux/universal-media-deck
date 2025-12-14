@@ -22,9 +22,9 @@ Schmedic:
 <img width="885" height="705" alt="image" src="https://github.com/user-attachments/assets/799e39c4-3de2-433e-968e-037f7f6ef4fb" />
 PCB
 2D:
-<img width="1035" height="738" alt="image" src="https://github.com/user-attachments/assets/8d200b32-d39f-42ce-9d1e-c4c6bbe3b913" />
+<img width="722" height="715" alt="image" src="https://github.com/user-attachments/assets/33544bb3-50f6-4952-956a-966493a25d2d" />
 3D
 Front:
-<img width="986" height="695" alt="image" src="https://github.com/user-attachments/assets/1a19701f-2069-4fbf-8e94-64aa017dc12e" />
+<img width="873" height="903" alt="image" src="https://github.com/user-attachments/assets/8fe7a115-e5f0-4532-8c2e-c1492db3e562" />
 Back:
-<img width="1071" height="721" alt="image" src="https://github.com/user-attachments/assets/914d48b2-d287-40c4-acf1-3a5b236e3f2b" />
+<img width="946" height="908" alt="image" src="https://github.com/user-attachments/assets/3b03dd72-2599-4b18-a04e-d0250702009e" />
