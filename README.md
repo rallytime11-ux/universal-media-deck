@@ -25,6 +25,6 @@ PCB
 <img width="1035" height="738" alt="image" src="https://github.com/user-attachments/assets/8d200b32-d39f-42ce-9d1e-c4c6bbe3b913" />
 3D
 Front:
-<img width="1132" height="707" alt="image" src="https://github.com/user-attachments/assets/364d5f47-c3c0-473f-bfb5-3afeef045ca0" />
+<img width="986" height="695" alt="image" src="https://github.com/user-attachments/assets/1a19701f-2069-4fbf-8e94-64aa017dc12e" />
 Back:
-<img width="929" height="690" alt="image" src="https://github.com/user-attachments/assets/2b1ed037-6c78-425a-b60b-1aa41d9fddcc" />
+<img width="1071" height="721" alt="image" src="https://github.com/user-attachments/assets/914d48b2-d287-40c4-acf1-3a5b236e3f2b" />
