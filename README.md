@@ -4,18 +4,17 @@ What I am trying to do? It's a wireless, Bluetooth controller for listening to m
 My planning: I will use an ESP32-C3 or S3 microcontroller. It will broadcast itself as a Bluetooth HID.
 It can volume up and down with the knob. Media next/prev/pause using the buttons. A small screen provide visual feedback.
 
-| Part | Est. Cost ($USD) | Purpose |
+| Part | Est. Cost ($AUD) | Purpose |
 | :--- | :--- | :--- |
-| **Seeeduino XIAO ESP32S3** | ~$10 | Microcontroller with **Bluetooth HID** and Wi-Fi capabilities to drive the screen and handle inputs. |
-| **1.28" Round LCD (GC9A01)** | ~$15 | High-resolution circular display for visual feedback (volume levels, layer status, animations). |
+| **Seeeduino XIAO ESP32S3** | ~$11 | Microcontroller with **Bluetooth HID** and Wi-Fi capabilities to drive the screen and handle inputs. |
+| **1.28" Round LCD (GC9A01)** | ~$7 | High-resolution circular display for visual feedback (volume levels, layer status, animations). |
 | **Rotary Encoder (EC11)** | ~$3 | **Through-hole** infinite rotation knob for volume control; includes an integrated push-button (Mute/Play). |
-| **Mechanical Switches (x3)** | ~$3 | **Through-hole** tactile switches for media controls (Previous, Play/Pause, Next). |
-| **LiPo Battery (500-1000mAh)** | ~$8 | Rechargeable power source to make the device completely wireless. |
-| **TP4056 Charging Module** | ~$2 | Integrated circuit to safely charge the LiPo battery via USB. |
+| **Mechanical Switches (x3)** | ~$2 | **Through-hole** tactile switches for media controls (Previous, Play/Pause, Next). |
+| **LiPo Battery (500-1000mAh)** | ~$7 | Rechargeable power source to make the device completely wireless. |
 | **SPDT Slide Switch** | ~$1 | Physical toggle switch to cut power from the battery when not in use. |
-| **3D Printed Case** | ~$2 | Enclosure to house the electronics, hold the screen at a 45° angle (Required for T4/T5). |
-| **Custom PCB** | ~$20* | Connects all components without messy wiring. *(Not sure if I can get voucher to buy the pcb).* |
-| **Total Parts Cost (Cash)** | **~$44**(without Custom PCB) | **This fits into the Tier 4 budget ($50).** |
+| **3D Printed Case** | Print it at school | Enclosure to house the electronics, hold the screen at a 45° angle (Required for T4/T5).|
+| **Custom PCB** | ~$4 | Connects all components without messy wiring. *I have a $10 voucher.* |
+| **Total Parts Cost (Cash)** | **~$35**(excluding shipping fee) | **This fits into the Tier 5 budget ($25 usd).** |
 
 Planning Graph
 Schmedic: 
