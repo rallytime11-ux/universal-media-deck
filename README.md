@@ -14,7 +14,7 @@ It can volume up and down with the knob. Media next/prev/pause using the buttons
 | **SPDT Slide Switch** | ~$1 | Physical toggle switch to cut power from the battery when not in use. |
 | **3D Printed Case** | Print it at school | Enclosure to house the electronics, hold the screen at a 45° angle (Required for T4/T5).|
 | **Custom PCB** | ~$4 | Connects all components without messy wiring. *I have a $10 voucher.* |
-| **Total Parts Cost (Cash)** | **~$35**(excluding shipping fee) | **This fits into the Tier 5 budget ($25 usd).** |
+| **Total Parts Cost (Cash)** | **~$35**(excluding shipping fee)/~$52(including shipping) | **This fits into the Tier 4 budget ($37 usd).** |
 
 Planning Graph
 Schmedic: 
